@@ -48,14 +48,14 @@ def ShowText(line) : # show the text file in the current curses windows
 	if filterflag == 0 : # no filter
 		for i in range(0,window_height-2) : # we can show more than window_height
 			if i < len(text) : # small text
-				win.addstr(i+1,1,"[" + prefix[line+i] + "] " + text[line+i][0:window_larger-6])
+				win.addstr(i+1,1,"[" + prefix[line+i] + "] " + text[line+i][0:window_larger-8])
 			else :
 				win.addstr(i+1,1,"")
 		
 	else : # filter mode
 		for i in range(0,window_height-2) : # we can show more than window_height
 			if i < len(filtertext) : # small text
-				win.addstr(i+1,1,"[" + prefix[filtertext[line+i]] + "] " + text[filtertext[line+i]][0:window_larger-6])
+				win.addstr(i+1,1,"[" + prefix[filtertext[line+i]] + "] " + text[filtertext[line+i]][0:window_larger-8])
 			else :
 				win.addstr(i+1,1,"\n")
 
