@@ -12,9 +12,9 @@ use the xterm type console if you want to use via SSH.
 Use : python pyselection.py file.txt
 
 Special Keys :<BR>
-UP/DOWN : navigate<BR>
-SPACE : select/unselect the line <BR>
-OTHER KEY : you can make a dynamic text filter<BR>
-BACKSPACE : you delete the text filter<BR>
-ENTER : save and exit<BR>
-ESC : no save and exit
+  - UP/DOWN : navigate
+  - SPACE : select/unselect the line
+  - OTHER KEY : you can make a dynamic text filter
+  - BACKSPACE : you delete one chr of the text filter
+  - ENTER : save and exit
+  - ESC : no save and exit
