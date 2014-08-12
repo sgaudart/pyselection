@@ -1,29 +1,11 @@
-#======================================================================
-# Auteur : sgaudart.dev@gmail.com
-# Date   : 06/07/2014
-# Subj   : read a text file and the user can select multiple lines
-# INPUT : 
-#			> 1 text file (argv[1])
-# OUTPUT :
-#			> 1 text file (selection of the input file named .selection)
-#
-#======================================================================
-#   Date      Version     Numero      Auteur       Commentaires
-# 21/07/14    10                      SGA          bug if small text file
-# 23/07/14    11                      SGA          manage the PAGE UP/DOWN
-# 25/07/14    13                      SGA          add function MoveCursor
-# 28/07/14    14                      SGA          start the function about filtering
-# 29/07/14    15                      SGA          big change for the filtering management
-# 30/07/14    16                      SGA          dynamic filter now
-# 05/08/14    17                      SGA          change the extension of the result file
-# 07/08/14    18                      SGA          add function for full border (ShowBorder)
-#======================================================================
+#!/usr/bin/env python
+# https://github.com/sgaudart/pyselection
 
 import curses
 import sys
 
-window_height=25 # window's lines 25
-window_larger=80 # window's rows 75
+window_height=25 # curses window's lines 25
+window_larger=80 # curses window's rows 75
 
 # reading the text file
 f = open(sys.argv[1],'r')
@@ -128,7 +110,7 @@ def MoveCursor (offset) :
 
 def CreateFilterTab(filter) :
 	global filtertext 
-	filtertext = [] # init du tableau filtertext
+	filtertext = [] # init filtertext
 	for i in range(0,totalline) :
 		if filter in text[i] :
 			filtertext.append(i)
