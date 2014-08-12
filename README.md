@@ -2,8 +2,10 @@
 
 Python program to read a text file and be able to select lines (the output is a text file with your selection)
 
-INPUT : input text file
-OUTPUT : your selected lines (output text file)
+  - INPUT : input text file
+  - OUTPUT : your selected lines (output text file)
+
+![Screenshot 1](http://github.com/sgaudart/pyselection/pyselection.png)
 
 ## Requirement
 
